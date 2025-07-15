@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
-
+import { ClerkProvider } from "@clerk/nextjs";
 
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
 });
-
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -21,11 +20,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${inter.variable} antialiased bg-2`}
+      <ClerkProvider 
+      appearance={{
+        layout:{
+          logoImageUrl:"/icons/logo.svg",
+          socialButtonsVariant:"iconButton"
+        },
+        variables:{
+          colorText: "#fff",
+          colorPrimary:"0E78F9",
+          colorBackground:"#1c1f2e",
+          colorInputBackground:"#252a41",
+          colorInputText:"#fff"
+        }
+      }}
       >
-        {children}
-      </body>
+        <body className={`${inter.variable} antialiased bg-2`}>{children}</body>
+      </ClerkProvider>
     </html>
   );
 }
