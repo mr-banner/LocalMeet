@@ -11,23 +11,52 @@
   .flex-between {
     @apply flex justify-between items-center;
   }
+
+  .text-sky-1 {
+    color: var(--sky-primary);
+  }
+
+  .bg-blue-1 {
+    background-color: var(--blue-primary);
+  }
+
+  .bg-2 {
+    background-color: var(--bg-primary);
+  }
+
+  .bg-1 {
+    background-color: var(--bg-secondary);
+  }
+
+  .bg-hero {
+    background-image: url('/images/hero-background.png');
+  }
+  .bg-orange{
+    background-color: var(--orange);
+  }
+  .bg-yellow{
+    background-color: var(--yellow);
+  }
+  .bg-purple{
+    background-color: var(--purple);
+  }
+  .bg-blue{
+    background-color: var(--blue);
+  }
+
 }
 
 @theme {
   --bg-primary: #161925;
   --bg-secondary: #1c1e25;
   --blue-primary: #0e78f9;
+  --sky-primary: #C9DDFF;
+  --sky-secondary:#ECF0FF;
+  --orange:#FF742E;
+  --purple:#830EF9;
+  --yellow:#F9A90E;
+  --blue:#0E78F9;
 }
-@utility bg-blue-1 {
-  background-color: var(--blue-primary);
-}
-@utility bg-2 {
-  background-color: var(--bg-primary);
-}
-@utility bg-1 {
-  background-color: var(--bg-secondary);
-}
-
 
 .cl-userButtonPopoverActionButtonIcon {
   color: white;
@@ -36,6 +65,7 @@
 .cl-logoBox {
   height: 40px;
 }
+
 .cl-dividerLine {
   background: #252a41;
   height: 2px;
@@ -45,14 +75,17 @@
   border: 3px solid #565761;
 }
 
-.cl-internal-wkkub3 {
-  color: white;
-}
+.cl-internal-wkkub3,
 .cl-userButtonPopoverActionButton {
   color: white;
 }
 
-.cl-providerIcon__github{
-  filter:invert(1);
+.cl-providerIcon__github {
+  filter: invert(1);
 }
 
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
