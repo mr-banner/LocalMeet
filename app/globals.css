@@ -89,3 +89,7 @@
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
 }
+
+.str-video__device-settings__button {
+  color: white;
+}
