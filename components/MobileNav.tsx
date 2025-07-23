@@ -47,8 +47,8 @@ const MobileNav = () => {
                   return (
                     <SheetClose asChild>
                       <Link
-                        href={link.route}
                         key={index}
+                        href={link.route}
                         className={cn(
                           "flex gap-4 p-4 rounded-lg w-full max-w-60 items-center",
                           {
