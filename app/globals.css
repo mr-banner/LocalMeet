@@ -43,12 +43,15 @@
   .bg-blue{
     background-color: var(--blue);
   }
+  .border-bg-1{
+    border-color: var(--bg-primary);
+  }
 
 }
 
 @theme {
   --bg-primary: #161925;
-  --bg-secondary: #1c1e25;
+  --bg-secondary: #1C1F2E;
   --blue-primary: #0e78f9;
   --sky-primary: #C9DDFF;
   --sky-secondary:#ECF0FF;
