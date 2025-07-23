@@ -4,9 +4,6 @@ import {
   Sheet,
   SheetClose,
   SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
 import Link from "next/link";
@@ -44,14 +41,14 @@ const MobileNav = () => {
           <div className="flex h-[calc(100vh - 72px)] flex-col justify-between  overflow-y-auto">
             <SheetClose asChild>
               <section className="flex flex-col h-full text-white gap-6 pt-16">
-                {sidebarLinks.map((link) => {
+                {sidebarLinks.map((link,index) => {
                   const isActive =
                     pathname === link.route;
                   return (
                     <SheetClose asChild>
                       <Link
                         href={link.route}
-                        key={link.label}
+                        key={index}
                         className={cn(
                           "flex gap-4 p-4 rounded-lg w-full max-w-60 items-center",
                           {

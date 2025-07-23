@@ -7,7 +7,7 @@ import MeetingCard from "./MeetingCard";
 import { toast } from "sonner";
 
 const CallList = ({ type }: { type: "ended" | "upcoming" | "recordings" }) => {
-  const { endedCalls, upcomingCalls, callRecordings, isLoading } =
+  const { endedCalls, upcomingCalls, callRecordings, } =
     useGetCalls();
   const router = useRouter();
   const [recordings, setRecordings] = useState<CallRecording[]>([]);
@@ -54,6 +54,7 @@ const CallList = ({ type }: { type: "ended" | "upcoming" | "recordings" }) => {
 
         setRecordings(recordings);
       } catch (error) {
+        console.log(error);
         toast('Try again later')
       }
     };

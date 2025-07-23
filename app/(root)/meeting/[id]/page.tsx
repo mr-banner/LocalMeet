@@ -10,7 +10,7 @@ import React, { useState } from "react";
 
 export default function Page({ params }: { params: { id: string } }) {
   const { id } = params;
-  const { user, isLoaded } = useUser();
+  const { isLoaded } = useUser();
   const { call, isCallLoading } = useGetCallById(id);
   const [isSetupComplete, setIsSetupComplete] = useState(false);
 
