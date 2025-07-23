@@ -41,19 +41,15 @@ const MobileNav = () => {
           <div className="flex h-[calc(100vh - 72px)] flex-col justify-between  overflow-y-auto">
             <SheetClose asChild>
               <section className="flex flex-col h-full text-white gap-6 pt-16">
-                {sidebarLinks.map((link,index) => {
-                  const isActive =
-                    pathname === link.route;
+                {sidebarLinks.map((link, index) => {
+                  const isActive = pathname === link.route;
                   return (
-                    <SheetClose asChild>
+                    <SheetClose key={index} asChild>
                       <Link
-                        key={index}
                         href={link.route}
                         className={cn(
                           "flex gap-4 p-4 rounded-lg w-full max-w-60 items-center",
-                          {
-                            "bg-blue-1": isActive,
-                          }
+                          { "bg-blue-1": isActive }
                         )}
                       >
                         <Image
@@ -62,9 +58,7 @@ const MobileNav = () => {
                           width={20}
                           height={20}
                         />
-                        <p className="font-semibold">
-                          {link.label}
-                        </p>
+                        <p className="font-semibold">{link.label}</p>
                       </Link>
                     </SheetClose>
                   );
